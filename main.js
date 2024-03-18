@@ -96,7 +96,7 @@ async function showSlides(n){
         html = `<figcaption class="more-info"> 
             <div class="art-info" style="border-right: 1px solid white"> 
                 ${info.life} <br> 
-                ${info.title} <br> 
+                <i>${info.title}</i> <br> 
                 ${info.date} <br> 
                 ${info.medium} <br>
                 ${info.dimensions}
@@ -109,7 +109,7 @@ async function showSlides(n){
         html = `<figcaption class="more-info"> 
         <div class="art-info"> 
             ${info.life} <br> 
-            ${info.title} <br> 
+            <i>${info.title}</i> <br> 
             ${info.date} <br> 
             ${info.medium} <br>
             ${info.dimensions}
