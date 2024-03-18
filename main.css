@@ -1,3 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Limelight&display=swap');
+
+:root{
+    --color1 : rgb(170, 156, 156);
+    --font1 : Alumni Sans
+}
+
 /* <An+B>
 Represents elements whose numeric position in a series of siblings matches the pattern An+B, 
 for every positive integer or zero value of n, where:
@@ -17,7 +26,12 @@ n is all nonnegative integers, starting from 0. */
 4 4 4 5 5 5
 
 */
-
+h1{
+    color: white;
+    text-align: center;
+    font-family: var(--font1);
+    font-size: 36pt;
+}
 .grid-container{
     display: grid;
     width: 40vw;
@@ -48,9 +62,7 @@ n is all nonnegative integers, starting from 0. */
 }
 
 
-:root{
-    --color1 : rgb(170, 156, 156);
-}
+
 
 body{
     background-color: black;
