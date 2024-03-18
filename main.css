@@ -1,0 +1,161 @@
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: min-content;
+
+}
+.art_img{
+    width: 100%;
+    max-height: 90%;
+    border: 10px solid gray;
+
+}
+
+/* .more-info{
+    background-color: aliceblue;
+    padding: 10px;
+    width: 100%;
+    margin-top: -5px;
+} */
+.art_item--0{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.art_item--1{
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+.art_item--2{
+    grid-column-start: 7;
+    grid-column-end: 10;
+}
+.art_item--3{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.art_item--4{
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+.art_item--5{
+    grid-column-start: 7;
+    grid-column-end: 10;
+}
+.art_item--6{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.art_item--7{
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+.art_item--8{
+    grid-column-start: 7;
+    grid-column-end: 10;
+}
+.art_item--9{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.modal {
+    z-index: 1;
+    position: fixed;
+    left: 0px;
+    top: 0;
+    padding: 10px;
+    height: 100vh;
+    width: 98vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+#galleryModal{
+    display: none;
+}
+
+.close{
+    z-index: 2;
+    text-decoration: none;
+}
+
+.content{
+    position: relative;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    'prev slide next'
+    'caption caption caption';
+
+    width:  98%;
+    height: 85%;
+    background-color: transparent;
+    object-fit: contain;
+
+}
+
+
+.close{
+    grid-area: close;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-weight: 300;
+    font-size: 20pt;
+}
+
+.slide {
+    grid-area: slide;
+    display: none;
+    max-height: 100%;
+    img{
+        object-fit: contain;
+        height: 75vh;
+    }
+}
+
+.prev,
+.next {
+    position: absolute;
+    font-size: 20pt;
+    text-decoration: none;
+    color: white;
+}
+
+.prev{
+    grid-area: prev;
+}
+
+.next {
+    grid-area: next;
+    right: 0;
+}
+
+.caption-container{
+    grid-area: caption;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.more-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: start;
+    .art-info{
+        width: 30vw;
+    }
+    .blurb{
+        padding-left: 10px;
+        width: 60vw;
+    }
+}

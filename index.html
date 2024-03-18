@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <title>Art Institute of Chicago API</title>
+</head>
+<body>
+    <h1>Art Institute of Chicago</h1>
+    <div class="grid-container">
+        <figure class="art_item art_item--0" id="art0" onclick="openModal(); currentSlide(1);">
+            <img src="https://www.artic.edu/iiif/2/e966799b-97ee-1cc6-bd2f-a94b4b8bb8f9/full/843,/0/default.jpg" alt="129884" class="art_img">
+        </figure>
+        <figure class="art_item art_item--1" id="art1" onclick="openModal(); currentSlide(2);">
+            <img src="https://www.artic.edu/iiif/2/7690dd6e-05ed-773c-a80e-e7cc4eb879cc/full/843,/0/default.jpg" alt="229393" class="art_img">
+        </figure>
+        <figure class="art_item art_item--2" id="art2" onclick="openModal(); currentSlide(3);">
+            <img src="https://www.artic.edu/iiif/2/b3974542-b9b4-7568-fc4b-966738f61d78/full/843,/0/default.jpg" alt="24645" class="art_img">
+        </figure>
+        <figure class="art_item art_item--3" id="art3" onclick="openModal(); currentSlide(4);">
+            <img src="https://www.artic.edu/iiif/2/aebda29e-16b8-4393-6edc-805cdb6ba459/full/843,/0/default.jpg" alt="111060" class="art_img">
+        </figure>
+        <figure class="art_item art_item--4" id="art4" onclick="openModal(); currentSlide(5);">
+            <img src="https://www.artic.edu/iiif/2/e7f4caac-6a16-e332-9a51-34f986d4b451/full/843,/0/default.jpg" alt="147003" class="art_img">
+        </figure>
+        <figure class="art_item art_item--5" id="art5" onclick="openModal(); currentSlide(6);">
+            <img src="https://www.artic.edu/iiif/2/21c98476-4704-604e-dac4-c650b5e62f9f/full/843,/0/default.jpg" alt="6596" class="art_img">
+        </figure>
+        <figure class="art_item art_item--6" id="art6" onclick="openModal(); currentSlide(7);">
+            <img src="https://www.artic.edu/iiif/2/0f6ffedf-d080-9528-9543-31087899ce57/full/843,/0/default.jpg" alt="234433" class="art_img">
+        </figure>
+        <figure class="art_item art_item--7" id="art7" onclick="openModal(); currentSlide(8);">
+            <img src="https://www.artic.edu/iiif/2/5a1eac91-a381-c961-3022-2a0aac79fea8/full/843,/0/default.jpg" alt="100079" class="art_img">
+        </figure>
+        <figure class="art_item art_item--8" id="art8" onclick="openModal(); currentSlide(9);">
+            <img src="https://www.artic.edu/iiif/2/28513c3e-ef16-0101-568c-9e752b53ce8a/full/843,/0/default.jpg" alt="104043" class="art_img">
+        </figure>
+        <figure class="art_item art_item--9" id="art9" onclick="openModal(); currentSlide(10);">
+            <img src="https://www.artic.edu/iiif/2/e75f3120-2fb0-826b-e922-a51b41e96027/full/843,/0/default.jpg" alt="188844" class="art_img">
+        </figure>
+    </div>
+    <div class="modal" id="galleryModal">
+        <a href="#" class="close cursor" onclick="closeModal()">&times;</a>
+        <div class="content">
+            <div class="slide" style="display:none">
+                <div class="numSlide">1 / 10</div>
+                <img src="https://www.artic.edu/iiif/2/e966799b-97ee-1cc6-bd2f-a94b4b8bb8f9/full/843,/0/default.jpg" alt="129884" style="width: 100%" class="gal_img">
+            </div>
+            <div class="slide" style="display:none">
+                <div class="numSlide">2 / 10</div>
+                <img src="https://www.artic.edu/iiif/2/7690dd6e-05ed-773c-a80e-e7cc4eb879cc/full/843,/0/default.jpg" alt="229393" style="width: 100%" class="gal_img">
+            </div>
+            <div class="slide" style="display:none">
+                <div class="numSlide">3 / 10</div>
+                <img src="https://www.artic.edu/iiif/2/b3974542-b9b4-7568-fc4b-966738f61d78/full/843,/0/default.jpg" alt="24645" style="width: 100%" class="gal_img">
+            </div>
+            <div class="slide" style="display:none">
+                <div class="numSlide">4 / 10</div>
+                <img src="https://www.artic.edu/iiif/2/aebda29e-16b8-4393-6edc-805cdb6ba459/full/843,/0/default.jpg" alt="111060" style="width: 100%" class="gal_img">
+            </div>
+            <div class="slide" style="display:none">
+                <div class="numSlide">5 / 10</div>
+                <img src="https://www.artic.edu/iiif/2/e7f4caac-6a16-e332-9a51-34f986d4b451/full/843,/0/default.jpg" alt="147003" style="width: 100%" class="gal_img">
+            </div>
+            <div class="slide" style="display:none">
+                <div class="numSlide">6 / 10</div>
+                <img src="https://www.artic.edu/iiif/2/21c98476-4704-604e-dac4-c650b5e62f9f/full/843,/0/default.jpg" alt="6596" style="width: 100%" class="gal_img">
+            </div>
+            <div class="slide" style="display:none">
+                <div class="numSlide">7 / 10</div>
+                <img src="https://www.artic.edu/iiif/2/0f6ffedf-d080-9528-9543-31087899ce57/full/843,/0/default.jpg" alt="234433" style="width: 100%" class="gal_img">
+            </div>
+            <div class="slide" style="display:none">
+                <div class="numSlide">8 / 10</div>
+                <img src="https://www.artic.edu/iiif/2/5a1eac91-a381-c961-3022-2a0aac79fea8/full/843,/0/default.jpg" alt="100079" style="width: 100%" class="gal_img">
+            </div>
+            <div class="slide" style="display:none">
+                <div class="numSlide">9 / 10</div>
+                <img src="https://www.artic.edu/iiif/2/28513c3e-ef16-0101-568c-9e752b53ce8a/full/843,/0/default.jpg" alt="104043" style="width: 100%" class="gal_img">
+            </div>
+            <div class="slide" style="display:none">
+                <div class="numSlide">10 / 10</div>
+                <img src="https://www.artic.edu/iiif/2/e75f3120-2fb0-826b-e922-a51b41e96027/full/843,/0/default.jpg" alt="188844" style="width: 100%" class="gal_img">
+            </div>
+
+            <a class="prev" onclick="changeSlide(-1)">&#10094</a>
+            <a class="next" onclick="changeSlide(1)">&#10095</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
