@@ -56,6 +56,17 @@ function closeModal(){
 var slideIndex = 1;
 
 document.addEventListener('DOMContentLoaded', (event) => showSlides(slideIndex))
+document.addEventListener('keydown', (e) => {
+    if(e.key == 'Escape'){
+        closeModal();
+    } else if (e.key == 'ArrowRight'){
+        changeSlide(1);
+    }
+    else if (e.key == 'ArrowLeft'){
+        changeSlide(-1);
+    }
+})
+
 
 // Next/previous controls
 function changeSlide(n) {
